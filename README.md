@@ -19,7 +19,6 @@
 flowchart LR
     UI[React 页面 :3000] -->|HTTP| API[Producer / API :8080]
     API -->|Produce| Broker[Broker :8081]
-    Broker -->|WebSocket 事件| UI
     Orders[Orders 消费者] -->|Fetch / Commit| Broker
     Addresses[Addresses 消费者] -->|Fetch / Commit| Broker
     Payments[Payments 消费者] -->|Fetch / Commit| Broker
