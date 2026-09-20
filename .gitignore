@@ -1,0 +1,19 @@
+# Local generated data
+/data/*.json
+
+# Dependencies and build output
+node_modules/
+dist/
+dist-ssr/
+/bin/
+*.test
+*.out
+*.tsbuildinfo
+
+# Local runtime files
+*.log
+*.pid
+.DS_Store
+.env
+.env.*
+!.env.example
