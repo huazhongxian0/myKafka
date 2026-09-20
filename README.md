@@ -15,17 +15,7 @@
 
 ## 架构
 
-```mermaid
-flowchart LR
-    UI[React 页面 :3000] -->|HTTP| API[Producer / API :8080]
-    API -->|Produce| Broker[Broker :8081]
-    Broker <-- Fetch / Commit --- Orders[Orders 消费者]
-    Broker <-- Fetch / Commit --- Addresses[Addresses 消费者]
-    Broker <-- Fetch / Commit --- Payments[Payments 消费者]
-    Orders --> OD[(orders.json)]
-    Addresses --> AD[(addresses.json)]
-    Payments --> PD[(payments.json)]
-```
+![Kafka Sim 架构图](docs/architecture.svg)
 
 Broker 内部的消息日志和消费进度保存在内存中。每个消费者服务启动三个 goroutine，分别固定监听 P0、P1、P2，每两秒拉取一次，每次每分区最多 100 条。
 

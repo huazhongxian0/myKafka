@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="360" viewBox="0 0 1280 360" role="img" aria-labelledby="title desc">
+<title id="title">Kafka Sim 架构</title>
+<desc id="desc">React 页面通过 HTTP 调用 Producer，Producer 写入 Broker。三个消费者分别向 Broker 发起 Fetch / Commit，并保存到各自的 JSON 文件。</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#94a3b8"/></marker></defs>
+<rect width="1280" height="360" rx="16" fill="#0f172a"/>
+<g font-family="Arial, sans-serif" font-size="15" fill="#e2e8f0">
+<rect x="24" y="150" width="172" height="60" rx="10" fill="#1e293b" stroke="#818cf8" stroke-width="1.5"/>
+<text x="110.0" y="185.0" text-anchor="middle" font-size="15" fill="#e2e8f0">React 页面 :3000</text>
+<rect x="267" y="150" width="210" height="60" rx="10" fill="#1e293b" stroke="#a78bfa" stroke-width="1.5"/>
+<text x="372.0" y="185.0" text-anchor="middle" font-size="15" fill="#e2e8f0">Producer / API :8080</text>
+<rect x="570" y="45" width="160" height="270" rx="10" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5"/>
+<text x="650.0" y="185.0" text-anchor="middle" font-size="15" fill="#e2e8f0">Broker :8081</text>
+<path d="M196 180H267" fill="none" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#arrow)"/>
+<text x="232" y="165" text-anchor="middle" font-size="13" fill="#cbd5e1">HTTP</text>
+<path d="M477 180H570" fill="none" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#arrow)"/>
+<text x="523" y="165" text-anchor="middle" font-size="13" fill="#cbd5e1">Produce</text>
+<rect x="895" y="45" width="175" height="60" rx="10" fill="#1e293b" stroke="#60a5fa" stroke-width="1.5"/>
+<text x="982.5" y="80.0" text-anchor="middle" font-size="15" fill="#e2e8f0">Orders 消费者</text>
+<path d="M895 75H730" fill="none" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#arrow)"/>
+<text x="812" y="60" text-anchor="middle" font-size="13" fill="#cbd5e1">Fetch / Commit</text>
+<path d="M1070 75H1110" fill="none" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#arrow)"/>
+<path d="M1110 55V95 A70 12 0 0 0 1250 95V55" fill="#1e293b" stroke="#60a5fa" stroke-width="1.5"/>
+<ellipse cx="1180" cy="55" rx="70" ry="12" fill="#1e293b" stroke="#60a5fa" stroke-width="1.5"/>
+<text x="1180" y="84" text-anchor="middle" font-size="15" fill="#e2e8f0">orders.json</text>
+<rect x="895" y="150" width="175" height="60" rx="10" fill="#1e293b" stroke="#34d399" stroke-width="1.5"/>
+<text x="982.5" y="185.0" text-anchor="middle" font-size="15" fill="#e2e8f0">Addresses 消费者</text>
+<path d="M895 180H730" fill="none" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#arrow)"/>
+<text x="812" y="165" text-anchor="middle" font-size="13" fill="#cbd5e1">Fetch / Commit</text>
+<path d="M1070 180H1110" fill="none" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#arrow)"/>
+<path d="M1110 160V200 A70 12 0 0 0 1250 200V160" fill="#1e293b" stroke="#34d399" stroke-width="1.5"/>
+<ellipse cx="1180" cy="160" rx="70" ry="12" fill="#1e293b" stroke="#34d399" stroke-width="1.5"/>
+<text x="1180" y="189" text-anchor="middle" font-size="15" fill="#e2e8f0">addresses.json</text>
+<rect x="895" y="255" width="175" height="60" rx="10" fill="#1e293b" stroke="#fbbf24" stroke-width="1.5"/>
+<text x="982.5" y="290.0" text-anchor="middle" font-size="15" fill="#e2e8f0">Payments 消费者</text>
+<path d="M895 285H730" fill="none" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#arrow)"/>
+<text x="812" y="270" text-anchor="middle" font-size="13" fill="#cbd5e1">Fetch / Commit</text>
+<path d="M1070 285H1110" fill="none" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#arrow)"/>
+<path d="M1110 265V305 A70 12 0 0 0 1250 305V265" fill="#1e293b" stroke="#fbbf24" stroke-width="1.5"/>
+<ellipse cx="1180" cy="265" rx="70" ry="12" fill="#1e293b" stroke="#fbbf24" stroke-width="1.5"/>
+<text x="1180" y="294" text-anchor="middle" font-size="15" fill="#e2e8f0">payments.json</text>
+</g></svg>
