@@ -19,9 +19,9 @@
 flowchart LR
     UI[React 页面 :3000] -->|HTTP| API[Producer / API :8080]
     API -->|Produce| Broker[Broker :8081]
-    Orders[Orders 消费者] -->|Fetch / Commit| Broker
-    Addresses[Addresses 消费者] -->|Fetch / Commit| Broker
-    Payments[Payments 消费者] -->|Fetch / Commit| Broker
+    Broker <-- Fetch / Commit --- Orders[Orders 消费者]
+    Broker <-- Fetch / Commit --- Addresses[Addresses 消费者]
+    Broker <-- Fetch / Commit --- Payments[Payments 消费者]
     Orders --> OD[(orders.json)]
     Addresses --> AD[(addresses.json)]
     Payments --> PD[(payments.json)]
